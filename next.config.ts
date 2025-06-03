@@ -3,7 +3,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  
 
   webpack(config, { dev, isServer }) {
     // Optional: Disable runtimeChunk to potentially fix CSS HMR error
