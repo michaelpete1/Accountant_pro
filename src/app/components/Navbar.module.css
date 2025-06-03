@@ -1,0 +1,51 @@
+@keyframes slideDownHeader {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.header {
+  animation: slideDownHeader 0.5s ease-out;
+}
+
+@keyframes slideInLink {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.navItem {
+  opacity: 0;
+}
+
+.navOpen .navItem {
+  opacity: 1;
+  animation: slideInLink 0.3s forwards;
+}
+
+.navOpen .navItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navOpen .navItem:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.navOpen .navItem:nth-child(3) {
+  animation-delay: 0.3s;
+}

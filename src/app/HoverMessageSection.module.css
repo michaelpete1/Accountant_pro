@@ -1,0 +1,30 @@
+/* HoverMessageSection.module.css */
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 5rem auto 0;
+}
+
+.innerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  animation: pulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
