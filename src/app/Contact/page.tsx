@@ -97,7 +97,7 @@ export default function ContactPage() {
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        Whether you have questions, want a free consultation, or just want to say hello — we&apos;re here to help! Reach out to Accountant Pro through any of the methods below.
+        Whether you have questions, want a free consultation, or just want to say hello — we are here to help! Reach out to Accountant Pro through any of the methods below.
       </p>
 
       <div
