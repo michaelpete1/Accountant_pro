@@ -1,7 +1,18 @@
-import type { NextConfig } from "next";
+// next.config.ts
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  swcMinify: true,
+
+  webpack(config, { dev, isServer }) {
+    // Optional: Disable runtimeChunk to potentially fix CSS HMR error
+    if (dev && !isServer) {
+      config.optimization.runtimeChunk = false;
+    }
+
+    return config;
+  },
 };
 
 export default nextConfig;
