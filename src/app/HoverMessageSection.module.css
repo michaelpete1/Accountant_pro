@@ -1,40 +1,29 @@
 .wrapper {
   position: relative;
   display: inline-block;
-  width: 100%;
-  max-width: 400px;
 }
 
 .innerText {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  right: 20px;
-  max-height: 150px;
-
   background-color: rgba(255, 255, 255, 0.3);
   padding: 10px 20px;
   border-radius: 8px;
 
+  /* ✅ Safari support */
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 
   transition: transform 0.4s ease, opacity 0.4s ease;
   opacity: 0;
   transform: translateY(20px);
-  color: #1a202c;
+  color: #1a202c; /* dark gray text */
   font-weight: 600;
 }
 
-/* Hover Reveal */
+/* Show text on hover */
 .wrapper:hover .innerText {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Mobile scroll support */
-@media (max-width: 768px) {
-  .innerText {
-    overflow: auto;
-  }
 }
